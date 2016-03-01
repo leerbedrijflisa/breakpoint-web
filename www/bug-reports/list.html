@@ -1,5 +1,13 @@
 <template>
-	<ul>
-		<li repeat.for="report of bugReports">${report.title}</li>
-	</ul>
+	<table>
+		<tr>
+			<th>Project</th>
+			<th>Title</th>
+		</tr>
+		
+		<tr repeat.for="report of bugReports">
+			<td>${report.project}</td>
+			<td>${report.title}</td>
+		</tr>
+	</table>
 </template>
