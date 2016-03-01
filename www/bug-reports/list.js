@@ -1,9 +1,8 @@
+import {Database} from 'database';
+
 export class List {
 	activate() {
-		this.bugReports = [
-			{ title: "Patrick is bugly", project: "Wreekpoint" },
-			{ title: "Joost crashed", project: "Wreekpoint" },
-			{ title: "Nothing happened", project: "Bulder	" }
-		];
+		var db = new Database();
+		this.bugReports = db.bugReports;
 	}
 }
