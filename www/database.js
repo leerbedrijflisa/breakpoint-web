@@ -1,13 +1,17 @@
+import {HttpClient} from "aurelia-fetch-client";
+
 export class Database {
 	constructor() {
-		this.bugReports = [
-			{ title: "Patrick is bugly", project: "Wreekpoint" },
-			{ title: "Joost crashed", project: "Wreekpoint" },
-			{ title: "Nothing happened", project: "Bulder	" }
-		];
+		this.http = new HttpClient();
+		this.http.configure(config => {
+			config
+				.useStandardConfiguration()
+				.withBaseUrl("http://localhost:31415/");
+		});
 	}
 	
 	fetchBugReports() {
-		return this.bugReports;
+		return this.http.fetch("reports")
+			.then(response => response.json());
 	}
 }
