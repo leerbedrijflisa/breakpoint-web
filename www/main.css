@@ -1,5 +1,7 @@
 * {
 	font-family: Verdana, sans-serif;
+    top: 0;
+    left: 0;
 }
 
 body {
@@ -13,4 +15,14 @@ table {
 
 th, td {
 	text-align: left;
+}
+
+input.create{
+    margin-left: 5vw;
+}
+
+label.create{
+    margin-top: 10px;
+    display: inline-block;
+    min-width: 15vw;
 }
