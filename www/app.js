@@ -8,8 +8,13 @@ export class App {
     
   constructor(http) {
      http.configure(x => {
-            x.withBaseUrl('http://localhost:4000/');
-            x.withHeader('Content-Type', 'application/json');
+            x.withBaseUrl('http://localhost:31415/')
+						  .withDefaults({
+								headers: {
+									'Accept': 'application/json',
+									'Content-Type': 'application/json'
+								}
+							});
     });
   }
   
