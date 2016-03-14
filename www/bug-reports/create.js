@@ -1,7 +1,12 @@
-import {Router} from "aurelia-router";
+import {Database} from 'database';
 
 export class Create {
-    submit(){
-        
+    constructor() {
+			this.report = {}
+		}
+		
+    submit() {
+        var db = new Database();
+				db.saveBugReport(this.report);
     } 
 }

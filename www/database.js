@@ -1,4 +1,4 @@
-import {HttpClient} from "aurelia-fetch-client";
+import {HttpClient, json} from "aurelia-fetch-client";
 
 export class Database {
 	constructor() {
@@ -6,12 +6,19 @@ export class Database {
 		this.http.configure(config => {
 			config
 				.useStandardConfiguration()
-				.withBaseUrl("http://localhost:4000/");
+				.withBaseUrl("http://localhost:31415/");
 		});
 	}
 	
 	fetchBugReports() {
 		return this.http.fetch("reports")
 			.then(response => response.json());
+	}
+	
+	saveBugReport(report) {
+		return this.http.fetch("reports", {
+				method: "post",
+				body: json(report)
+		})
 	}
 }
