@@ -1,3 +1,24 @@
 <template>
-	<router-view></router-view>
+    <style>
+    li.header-li{
+        display: inline;
+        padding-right: 20px;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+    </style>
+    <div class="header">
+        <ul>
+            <a href=""><li class="header-li">Overview</li></a>
+            <a href="/#/create"<li class="header-li">Create</li></a>
+        </ul>
+    </div>
+    <router-view></router-view>
 </template>
