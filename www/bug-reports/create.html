@@ -3,12 +3,12 @@
     <form>
 				<p>
         	<label class="create">Title</label>
-        	<input class="create" type="text" value.bind="report.title">
+        	<input class="create" type="text" value.bind="report.title" required>
 				</p>
 				
 				<p>
 					<label class="create">Project name</label>
-					<input class="create" type="text" value.bind="report.projectName">
+					<input class="create" type="text" value.bind="report.projectName" required>
 				</p>
         
         <button click.trigger="submit()">Create</button>  
