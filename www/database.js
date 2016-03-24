@@ -10,8 +10,9 @@ export class Database {
 		});
 	}
 	
-	fetchBugReports() {
-		return this.http.fetch("reports")
+	fetchBugReports(sort) {
+        console.log(sort)
+		return this.http.fetch("reports/" + "?sort=" + sort.option + "&order=" + sort.order)
 			.then(response => response.json());
 	}
 	

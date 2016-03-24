@@ -1,4 +1,11 @@
 <template>
+    <select value.bind="sort.option" change.trigger="updateSort()">
+        <option repeat.for="option of sortOptions" value.bind="option.value">${option.name}</option>
+    </select>
+    <select value.bind="sort.order" change.trigger="updateSort()">
+        <option repeat.for="order of sortOrders" value.bind="order.value">${order.name}</option>
+    </select>
+
 	<table>
 		<tr>
 			<th>Project</th>
