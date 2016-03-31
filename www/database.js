@@ -6,7 +6,7 @@ export class Database {
 		this.http.configure(config => {
 			config
 				.useStandardConfiguration()
-				.withBaseUrl("http://localhost:31415/");
+				.withBaseUrl("http://breakpoint-develop-api.azurewebsites.net/");
 		});
 	}
 	

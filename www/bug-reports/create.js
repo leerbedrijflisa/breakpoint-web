@@ -8,6 +8,6 @@ export class Create {
     submit() {
         var db = new Database();
 				db.saveBugReport(this.report);
-        window.location.replace('');        
+        window.location.replace('#/' +"?_t=" + new Date().getTime());        
     } 
 }
