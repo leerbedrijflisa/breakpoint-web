@@ -3,10 +3,14 @@ System.config({
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
-    ]
+   "stage": 2,
+   "optional": [
+     "es7.decorators",
+     "es7.classProperties",
+     "es7.asyncFunctions",
+     "runtime",
+     "optimisation.modules.system"
+   ]
   },
   paths: {
     "github:*": "jspm_packages/github/*",

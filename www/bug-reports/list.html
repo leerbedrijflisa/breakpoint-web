@@ -13,7 +13,7 @@
 		</tr>
 		
 		<tr repeat.for="report of bugReports">
-			<td>${report.project}</td>
+			<td><a route-href="route: project; params.bind: {projectName:report.project}">${report.project}</a></td>
 			<td>${report.title}</td>
 		</tr>
 	</table>

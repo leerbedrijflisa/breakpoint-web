@@ -22,4 +22,9 @@ export class Database {
 				body: json(report)
 		})
 	}
+    
+    fetchSpecificProjectBugReports(project) {
+		return this.http.fetch("reports/?project=" + project)
+            .then(response => response.json());
+    }
 }
