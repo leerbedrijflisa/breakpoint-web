@@ -2,20 +2,32 @@
 	font-family: Verdana, sans-serif;
     top: 0;
     left: 0;
+    margin: 0 0 0 0;
 }
 
-body {
-    width: 1000px;
-    margin: 30px auto 50px auto;
+body{
+    background-color: rgba(231, 76, 60, 1.0);
+    color: white;
 }
 
-table {
+div.container{
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+table{
 	width: 100%;
+    margin-left: 0%;
+
 }
 
 th, td {
 	text-align: left;
 }
+
 
 input.create{
     margin-left: 5vw;
@@ -25,4 +37,37 @@ label.create{
     margin-top: 10px;
     display: inline-block;
     min-width: 15vw;
+}
+
+li.header-li{
+    display: inline;
+    padding-right: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+div.header{
+    height: 5vh;
+    background-color: rgba(192, 57, 43, 0.8);
+    padding-top: 10px;
+
+}
+
+select.selectFilter{
+    width: 10%;
+}
+
+table.tableList{
+    background-color: rgba(192, 57, 43, 0.2);
+    margin-top: 5vh;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
 }
