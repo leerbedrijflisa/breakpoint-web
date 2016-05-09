@@ -1,4 +1,26 @@
 <template>
+    <div id="filter">
+        <form role="form" validate.bind="statusFilter">
+            <p>Status:</p>
+            <label>Open</label>
+            <input type="checkbox" checked.bind="statusFilter.open" change.delegate="updateSort()">
+
+            <label>Fixed</label>
+            <input type="checkbox" checked.bind="statusFilter.fixed" change.delegate="updateSort()">
+
+            <label>Closed</label>
+            <input type="checkbox" checked.bind="statusFilter.closed" change.delegate="updateSort()">
+
+            <label>Won't fix</label>
+            <input type="checkbox" checked.bind="statusFilter.wontfix" change.delegate="updateSort()">
+
+            <label>Won't fix (approved)</label>
+            <input type="checkbox" checked.bind="statusFilter.wontfixApproved" change.delegate="updateSort()">
+            
+            
+        </form>
+    </div>
+    
     <select value.bind="sort.option" change.trigger="updateSort()">
         <option repeat.for="option of sortOptions" value.bind="option.value">${option.name}</option>
     </select>
@@ -10,11 +32,13 @@
 		<tr>
 			<th>Project</th>
 			<th>Title</th>
+            <th>Reported</th>
 		</tr>
 		
 		<tr repeat.for="report of bugReports">
 			<td>${report.project}</td>
 			<td>${report.title}</td>
+            <td>${report.reported}</td>
 		</tr>
 	</table>
 </template>

@@ -18,8 +18,8 @@ export class List {
                 name: "Title",
                 value: "title"
             }, {
-                name: "Date",
-                value: "date"
+                name: "Reported",
+                value: "reported"
             }
         ];
         this.sortOrders = [
@@ -39,5 +39,7 @@ export class List {
     
     updateSort() {
         this.activate(this.sort)
+        console.log(this.statusFilter)
+        console.log(JSON.stringify(this.statusFilter))
     }
 }
