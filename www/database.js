@@ -27,4 +27,9 @@ export class Database {
 		return this.http.fetch("reports/?project=" + project)
             .then(response => response.json());
     }
+    
+    getBugReportInfo(id) {
+        return this.http.fetch("reports/" + id)
+            .then(response => response.json());
+    }
 }
