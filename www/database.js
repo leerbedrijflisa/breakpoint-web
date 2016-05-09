@@ -17,7 +17,7 @@ export class Database {
 	}
 	
 	saveBugReport(report) {
-		return this.http.fetch("reports" +"?_t=" + new Date().getTime(), {
+		return this.http.fetch("reports", {
 				method: "post",
 				body: json(report)
 		})

@@ -1,13 +1,18 @@
+import {inject} from 'aurelia-framework';  
 import {Database} from 'database';
+import {Router} from 'aurelia-router';
 
+@inject(Router, Database)
 export class Create {
-    constructor() {
+    
+    constructor(router, database) {
+            this.router = router;
+            this.db = database;
 			this.report = {}
 		}
 		
     submit() {
-        var db = new Database();
-				db.saveBugReport(this.report);
-        window.location.replace('');        
+				this.db.saveBugReport(this.report).then(() =>
+                    this.router.navigate(''));
     } 
 }

@@ -1,18 +1,14 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
+var gulp = require("gulp");
+var browserSync = require("browser-sync");
 
-gulp.task('serve', function() {
- browserSync({
-     open: false,
+gulp.task("serve", function() {
+    browserSync({
         server: {
-            baseDir: 'www'
+            baseDir: "www"
         }
     });
-    
-    gulp.watch(
-           //{interval: 100}, 
-           ['**/*.html', '**/*.js', '**/*.css'], 
-           { cwd: 'www' }, 
-           browserSync.reload
-       );
+});
+
+gulp.task("watch", [ "serve" ], function() {
+    gulp.watch(["*.js", "*.html", "*.css"], {cwd: "www"}, browserSync.reload); 
 });
