@@ -18,7 +18,7 @@ async activate(params) {
 
         console.log(currentBug);
         
-        this.selectedVal ="open";
+        this.selectedVal = currentBug.status;
    }
    
   submit(id) {
