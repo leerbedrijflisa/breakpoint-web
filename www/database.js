@@ -32,4 +32,12 @@ export class Database {
         return this.http.fetch("reports/" + id)
             .then(response => response.json());
     }
+    
+    updateBugReportInfo(selectedVal, id) {
+        var bugReport = [{ action: "replace", field: "status", value: selectedVal }];
+        this.http.fetch("reports/" + id, {
+            method: 'PATCH',
+            body: json(bugReport)
+        });              
+    }
 }

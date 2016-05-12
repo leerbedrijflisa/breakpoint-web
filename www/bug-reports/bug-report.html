@@ -1,6 +1,18 @@
 <template>
     
 <div class="container">
-    <p>Current bug: ${currentBug.title}</p>
+    <p>Current bug: <strong>${currentBug.title}</strong> in project: <strong>${currentBug.project}</strong> assigned to: <strong>${currentBug.assignee}</strong></p>
+    <p>Status:  <strong>${currentBug.status}</strong></p>
+    
+    <select id="select" value.bind="selectedVal">
+        <option disabled selected="selected">Select your desired status</option>
+        <option value="open">Open</option>
+        <option value="fixed">Fixed</option>
+        <option value="closed">Closed</option>
+        <option value="wontFix">Won't Fix</option>
+        <option value="wontFixApproved">Won't Fix (Approved)</option>
+    </select>
+    <button id="submit" click.trigger="submit(currentBug.id)">Submit</button>  
 </div>
+
 </template>

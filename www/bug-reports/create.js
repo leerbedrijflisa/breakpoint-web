@@ -12,7 +12,7 @@ export class Create {
 		}
 		
     submit() {
-				this.db.saveBugReport(this.report).then(() =>
-                    this.router.navigate(''));
+        this.db.saveBugReport(this.report).then(() =>
+            this.router.navigate(''));
     } 
 }
