@@ -1,11 +1,13 @@
 import {inject} from 'aurelia-framework';  
 import {Database} from 'database';
+import {Router} from 'aurelia-router';
 
-@inject(Database)
+@inject(Database, Router)
 export class bugReport {
     
-    constructor(database) {
+    constructor(database, router) {
             this.db = database;
+            this.router = router;
 		}
    
 async activate(params) {
@@ -15,13 +17,14 @@ async activate(params) {
         let currentBug = await this.db.getBugReportInfo(params.id);
 
         this.currentBug = currentBug;
-
-        console.log(currentBug);
+        this.currentBugAssignee = currentBug.assignee;
         
         this.selectedVal = currentBug.status;
    }
    
   submit(id) {
       this.db.updateBugReportInfo(this.selectedVal, id);
+      
+      window.location.reload()
   }
 }
