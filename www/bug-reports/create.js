@@ -12,6 +12,7 @@ export class Create {
 		}
 		
     submit() {
+        document.getElementById('createBtn').setAttribute("disabled","disabled");
         this.db.saveBugReport(this.report).then(() =>
             this.router.navigate(''));
     } 
