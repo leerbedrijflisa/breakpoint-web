@@ -7,6 +7,7 @@
     <tr repeat.for="report of bugReports">
         <td><a route-href="route: bug-report; params.bind: { id:report.id}">${report.title}</a></td>
         <td>Reported: ${report.reported}</td>
+        <td>Status: ${report.status}</td>
     </tr>
  </table>
  </div>
