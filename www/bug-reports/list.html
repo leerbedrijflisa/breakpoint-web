@@ -1,21 +1,23 @@
 <template>
     <div class="container">
-        <select class="selectFilter" value.bind="sort.option" change.trigger="updateSort()">
+        <!--<select class="selectFilter" value.bind="sort.option" change.trigger="updateSort()">
             <option repeat.for="option of sortOptions" value.bind="option.value">${option.name}</option>
         </select>
         <select class="selectFilter" value.bind="sort.order" change.trigger="updateSort()">
             <option repeat.for="order of sortOrders" value.bind="order.value">${order.name}</option>
-        </select>
+        </select>-->
 
         <table class="tableList">
             <tr>
                 <th>Project</th>
                 <th>Title</th>
+                <th>Date</th>
             </tr>
             
             <tr repeat.for="report of bugReports">
                 <td><a route-href="route: project; params.bind: {projectName:report.project}">${report.project}</a></td>
                 <td>${report.title}</td>
+                <td>${report.reported}</td>
             </tr>
         </table>
     </div>
