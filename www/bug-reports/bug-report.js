@@ -24,7 +24,6 @@ async activate(params) {
    
   submit(id) {
       this.db.updateBugReportInfo(this.selectedVal, id);
-      
-      window.location.reload()
+
   }
 }
