@@ -11,11 +11,13 @@
             <tr>
                 <th>Project</th>
                 <th>Title</th>
+                <th>Date</th>
             </tr>
             
             <tr repeat.for="report of bugReports">
                 <td><a route-href="route: project; params.bind: {projectName:report.project}">${report.project}</a></td>
                 <td>${report.title}</td>
+                <td>${report.reported}</td>
             </tr>
         </table>
     </div>
