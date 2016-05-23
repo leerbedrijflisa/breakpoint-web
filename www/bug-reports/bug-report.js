@@ -11,19 +11,26 @@ export class bugReport {
 		}
    
 async activate(params) {
-        console.log(params.id);
 
         this.id = params.id;
         let currentBug = await this.db.getBugReportInfo(params.id);
 
         this.currentBug = currentBug;
-        this.currentBugAssignee = currentBug.assignee;
+        this.selectedUser = currentBug.assignee;
         
         this.selectedVal = currentBug.status;
+        
+        let Users = await this.db.getAllUsers();
+        this.userOptions = Users;
+        console.log(this.userOptions);  
    }
    
-  submit(id) {
+  submitStatus(id) {
       this.db.updateBugReportInfo(this.selectedVal, id);
-
+  }
+  
+  submitUser(id) {
+      console.log(this.selectedUser);
+      this.db.updateBugReportAssignee(this.selectedUser, id);   
   }
 }

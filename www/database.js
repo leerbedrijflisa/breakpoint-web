@@ -46,4 +46,17 @@ export class Database {
             body: json(bugReport)
         });              
     }
+    
+    updateBugReportAssignee(selectedUser, id) {
+        var bugReport = [{ action: "replace", field: "assignee", value: selectedUser }];
+        this.http.fetch("reports/" + id, {
+            method: 'PATCH',
+            body: json(bugReport)
+        });              
+    } 
+ 
+    getAllUsers() {
+         return this.http.fetch("users")
+            .then(response => response.json());
+    }
 }

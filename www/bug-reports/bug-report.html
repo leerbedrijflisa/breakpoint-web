@@ -3,14 +3,17 @@
 <div class="container">
     <p>Project: <strong>${currentBug.project}</strong><br>
     Current bug: <strong>${currentBug.title}</strong><br>
-    Assigned to: <strong>${currentBug.assignee}</strong><br>
     Status:
-    <select id="select" value.bind="selectedVal" change.trigger="submit(currentBug.id)">
+    <select id="select" value.bind="selectedVal" change.trigger="submitStatus(currentBug.id)">
         <option value="open">Open</option>
         <option value="fixed">Fixed</option>
         <option value="closed">Closed</option>
         <option value="wontFix">Won't Fix</option>
         <option value="wontFixApproved">Won't Fix (Approved)</option>
+    </select><br>
+    Assigned to:
+    <select id="select" value.bind="selectedUser" change.trigger="submitUser(currentBug.id)">
+        <option repeat.for="user of userOptions" value.bind="user">${user}</option>
     </select>
     </p>
 </div>
