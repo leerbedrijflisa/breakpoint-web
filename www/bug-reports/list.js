@@ -43,6 +43,7 @@ export class List {
 		this.db.fetchBugReports(this.sort).then(bugReports => {
 			this.bugReports = bugReports;
 		});
+        
 	}
     
     updateSort() {

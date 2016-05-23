@@ -9,7 +9,8 @@ export class Database {
 				.withBaseUrl("http://breakpoint-develop-api.azurewebsites.net/");
 		});
 	}
-	
+    
+    
 	fetchBugReports(sort) {
         console.log(sort)
 		return this.http.fetch("reports/" + "?sort=" + sort.option + "&order="+ sort.order)
