@@ -1,7 +1,13 @@
+import {inject} from 'aurelia-framework';  
 import {Database} from 'database';
+import {Router} from 'aurelia-router';
 
+@inject(Database, Router)
 export class List {
-    constructor() {
+    constructor(database, router) {
+        
+        this.db = database;
+        this.router = router;
 
         if(this.sort == null) {
             this.sort = {
@@ -33,13 +39,24 @@ export class List {
             }
         ]
 
-		var db = new Database();
-		db.fetchBugReports(this.sort).then(bugReports => {
+		
+		this.db.fetchBugReports(this.sort).then(bugReports => {
 			this.bugReports = bugReports;
 		});
 	}
     
     updateSort() {
         this.activate(this.sort)
+    }
+    
+    updateFilter() {
+        console.log(this.filterOption);
+        
+        this.db.filterBugReports(this.filterOption).then(bugReports => {
+			this.bugReports = bugReports;
+		});
+
+        
+        
     }
 }

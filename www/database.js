@@ -15,6 +15,11 @@ export class Database {
 		return this.http.fetch("reports/" + "?sort=" + sort.option + "&order="+ sort.order)
 			.then(response => response.json());
 	}
+    
+    filterBugReports(filter) {
+        return this.http.fetch("reports/" + "?status=" + filter)
+            .then(response => response.json());
+    }
 	
 	saveBugReport(report) {
 		return this.http.fetch("reports", {
