@@ -1,5 +1,5 @@
 * {
-	font-family: Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
     top: 0;
     left: 0;
     margin: 0 0 0 0;
@@ -10,17 +10,20 @@ body{
     color: white;
 }
 
-div.container{
+.container{
     display: block;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2%;
+}
+select.selectFilter{
+	margin-top:2%;
+	margin-right:10px;
 }
 
 table{
 	width: 100%;
-    margin-left: 0%;
+  margin-left: 0%;
 
 }
 
@@ -53,11 +56,19 @@ a:hover{
     text-decoration: underline;
 }
 
-div.header{
+div.navbar{
     height: 5vh;
     background-color: rgba(22, 160, 133,1.0);
-    padding-top: 10px;
+    padding-top: 0.5%;
 
+}
+
+img.logoimg {
+  border-radius: 5px;
+  border: 2px solid #E2E4E6;
+  width: 36px;
+  height: 36px;
+  float: left;
 }
 
 select.selectFilter{
@@ -67,8 +78,7 @@ select.selectFilter{
 table.tableList{
     background-color: rgba(22, 160, 133,0.8);
     margin-top: 5vh;
-    border-radius: 10px;
-    border: 2px solid white;
+    border-radius: 5px;
+    border: 5px solid #E2E4E6;
     padding: 10px;
 }
-
