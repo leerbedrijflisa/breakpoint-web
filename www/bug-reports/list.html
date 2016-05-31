@@ -7,7 +7,7 @@
             <option repeat.for="order of sortOrders" value.bind="order.value">${order.name}</option>
         </select>
         <select class="selectFilter" value.bind="filterOption" change.trigger="updateFilter()">
-            <option selected="true" disabled="disabled">Choose filter</option>
+            <option selected="true">All</option>
             <option value="open">Open</option>
             <option value="fixed">Fixed</option>
             <option value="closed">Closed</option>

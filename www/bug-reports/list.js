@@ -51,13 +51,18 @@ export class List {
     }
     
     updateFilter() {
-        console.log(this.filterOption);
         
-        this.db.filterBugReports(this.filterOption).then(bugReports => {
-			this.bugReports = bugReports;
-		});
+        if(this.filterOption == "All") {
+            this.db.fetchBugReports("Title").then(bugReports => {
+			    this.bugReports = bugReports;
+            })
+        }
+        
+        else{        
+            this.db.filterBugReports(this.filterOption).then(bugReports => {
+                this.bugReports = bugReports;
+		    });
 
-        
-        
+        }  
     }
 }
