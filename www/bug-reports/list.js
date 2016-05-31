@@ -63,6 +63,6 @@ export class List {
                 this.bugReports = bugReports;
 		    });
 
-        }  
+        }       
     }
 }

@@ -11,7 +11,14 @@
             <input class="create" type="text" value.bind="report.project" required>
         </p>
         
+        <p>
+            <label class="create">Description</label>
+            <textarea class="create" type="text" value.bind="report.description" required></textarea>
+        </p>
+        
         <button id="createBtn" click.trigger="submit()">Create</button>  
+        
+
     </form>
     </div>
 </template>

@@ -1,84 +1,91 @@
+
 * {
-	font-family: 'Open Sans', sans-serif;
-    top: 0;
-    left: 0;
-    margin: 0 0 0 0;
+    font-family: 'Open Sans', sans-serif;
+   top: 0;
+   left: 0;
+   margin: 0 0 0 0;
 }
 
 body{
-    background-color: rgba(26, 188, 156,1.0);
-    color: white;
+   background-color: rgba(26, 188, 156,1.0);
+   color: white;
 }
 
 .container{
+   display: block;
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+        margin-top:2%;
+}
+.center{
     display: block;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
-select.selectFilter{
-	margin-top:2%;
-	margin-right:10px;
-}
 
 table{
-	width: 100%;
-  margin-left: 0%;
+    width: 100%;
+ margin-left: 0%;
 
 }
 
 th, td {
-	text-align: left;
-}
-
-
-input.create{
-    margin-left: 5vw;
+    text-align: left;
 }
 
 label.create{
-    margin-top: 10px;
-    display: inline-block;
-    min-width: 15vw;
+   margin-top: 10px;
+   display: inline-block;
+   min-width: 15vw;
+}
+
+textarea.create{
+   margin-top: 10px;
+   display: inline-block;
+   min-width: 30%;
+   height: 100px;
+   vertical-align: top;
 }
 
 li.header-li{
-    display: inline;
-    padding-right: 20px;
+   display: inline;
+   padding-right: 20px;
 }
 
 a{
-    color: white;
-    text-decoration: none;
+   color: white;
+   text-decoration: none;
 }
 
 a:hover{
-    text-decoration: underline;
+   text-decoration: underline;
 }
 
 div.navbar{
-    height: 5vh;
-    background-color: rgba(22, 160, 133,1.0);
-    padding-top: 0.5%;
+   height: 5vh;
+   background-color: rgba(22, 160, 133,1.0);
+   padding-top: 0.5%;
 
 }
 
 img.logoimg {
-  border-radius: 5px;
-  border: 2px solid #E2E4E6;
-  width: 36px;
-  height: 36px;
-  float: left;
+ border-radius: 5px;
+ border: 2px solid #E2E4E6 ;
+ width: 4vh;
+ height: 4vh;
+ float: left;
 }
 
 select.selectFilter{
-    width: 10%;
+   width: 10%;
 }
 
 table.tableList{
-    background-color: rgba(22, 160, 133,0.8);
-    margin-top: 5vh;
-    border-radius: 5px;
-    border: 5px solid #E2E4E6;
-    padding: 10px;
+   background-color: rgba(22, 160, 133,0.8);
+   margin-top: 5vh;
+   border-radius: 5px;
+   border: 5px solid #E2E4E6 ;
+   padding: 10px;
 }

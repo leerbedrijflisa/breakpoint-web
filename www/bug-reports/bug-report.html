@@ -3,6 +3,7 @@
 <div class="container">
     <p>Project: <strong>${currentBug.project}</strong><br>
     Current bug: <strong>${currentBug.title}</strong><br>
+    Description: <strong>${currentBug.description}</strong><br>
     Status:
     <select id="select" value.bind="selectedVal" change.trigger="submitStatus(currentBug.id)">
         <option value="open">Open</option>
