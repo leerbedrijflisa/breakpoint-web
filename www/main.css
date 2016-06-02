@@ -18,6 +18,18 @@ body{
    margin-right: auto;
         margin-top:2%;
 }
+
+div.groups{
+    width: 20%;
+    display: block;
+    float: right;
+    top: 0%;
+    border-radius: 5px;
+    border: 5px solid white ;
+    padding: 10px;
+    
+}
+
 .center{
     display: block;
     width: 80%;
@@ -27,7 +39,7 @@ body{
 
 table{
     width: 100%;
- margin-left: 0%;
+    margin-left: 0%;
 
 }
 
@@ -72,7 +84,7 @@ div.navbar{
 
 img.logoimg {
  border-radius: 5px;
- border: 2px solid #E2E4E6 ;
+ border: 2px solid white;
  width: 4vh;
  height: 4vh;
  float: left;
@@ -86,6 +98,14 @@ table.tableList{
    background-color: rgba(22, 160, 133,0.8);
    margin-top: 5vh;
    border-radius: 5px;
-   border: 5px solid #E2E4E6 ;
+   border: 5px solid white;
    padding: 10px;
+}
+
+#submitGroup{
+    margin-top: 5%;
+}
+
+#selectUserGroup{
+    margin-top: 2%;
 }

@@ -22,8 +22,8 @@ async activate(params) {
         
         let Users = await this.db.getAllUsers();
         this.userOptions = Users;
-        console.log(this.userOptions);  
-   }
+        console.log(this.userOptions);
+}
    
   submitStatus(id) {
       this.db.updateBugReportInfo(this.selectedVal, id);

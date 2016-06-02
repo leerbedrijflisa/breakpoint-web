@@ -1,6 +1,22 @@
 <template>
     
 <div class="container">
+    <div class="groups">
+        <p>Invite user</p>
+         <select id="selectUserGroup" value.bind="selectedUser">
+            <option repeat.for="user of userOptions" value.bind="user">${user.userName}</option>
+        </select><br>
+        <p>
+        <select id="select" value.bind="selectedVal" change.trigger="submitStatus(currentBug.id)">
+            <option value="manager">Manager</option>
+            <option value="developer">Developer</option>
+            <option value="tester">Tester</option>
+        </select><br>
+    
+
+        
+        <button id="submitGroup" click.trigger="submitGroup()">Submit</button>
+    </div>
     <p>Project: <strong>${currentBug.project}</strong><br>
     Current bug: <strong>${currentBug.title}</strong><br>
     Description: <strong>${currentBug.description}</strong><br>
@@ -14,7 +30,7 @@
     </select><br>
     Assigned to:
     <select id="select" value.bind="selectedUser" change.trigger="submitUser(currentBug.id)">
-        <option repeat.for="user of userOptions" value.bind="user">${user}</option>
+        <option repeat.for="user of userOptions" value.bind="user">${user.userName}</option>
     </select>
     </p>
 </div>
