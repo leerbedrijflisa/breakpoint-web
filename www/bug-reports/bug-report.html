@@ -4,7 +4,7 @@
     <div class="groups">
         <p>Invite user</p>
          <select id="selectUserGroup" value.bind="selectedUser">
-            <option repeat.for="user of userOptions" value.bind="user">${user.userName}</option>
+            <option repeat.for="user of userOptions" model.bind="user.userName">${user.userName}</option>
         </select><br>
         <p>
         <select id="select" value.bind="selectedVal" change.trigger="submitStatus(currentBug.id)">
@@ -30,7 +30,7 @@
     </select><br>
     Assigned to:
     <select id="select" value.bind="selectedUser" change.trigger="submitUser(currentBug.id)">
-        <option repeat.for="user of userOptions" value.bind="user">${user.userName}</option>
+        <option repeat.for="user of userOptions" model.bind="user">${user.userName}</option>
     </select>
     </p>
 </div>

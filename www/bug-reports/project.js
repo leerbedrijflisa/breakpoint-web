@@ -16,6 +16,7 @@ export class Project {
         }, this);
 
         this.bugReports = bugReports;
+        console.log(this.bugReports);
 
     }
     

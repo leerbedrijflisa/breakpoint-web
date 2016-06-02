@@ -50,7 +50,7 @@ export class Database {
     }
 
     updateBugReportAssignee(selectedUser, id) {
-        var bugReport = [{ action: "replace", field: "assignee", value: selectedUser }];
+        var bugReport = [{ action: "replace", field: "assignee", value: selectedUser.userName }];
         this.http.fetch("reports/" + id, {
             method: 'PATCH',
             body: json(bugReport)

@@ -21,6 +21,11 @@ async activate(params) {
         this.selectedVal = currentBug.status;
         
         let Users = await this.db.getAllUsers();
+        
+        Users.forEach(function(user) {
+               this.userName = user.userName;
+        }, this);
+        
         this.userOptions = Users;
         console.log(this.userOptions);
 }
@@ -30,7 +35,7 @@ async activate(params) {
   }
   
   submitUser(id) {
-      console.log(this.selectedUser);
+      console.log(this.selectedUser.userName);
       this.db.updateBugReportAssignee(this.selectedUser, id);   
   }
 }
