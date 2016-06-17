@@ -32,8 +32,7 @@ export class Database {
     fetchSpecificProjectBugReports(project) {
 		return this.http.fetch("reports/?project=" + project)
             .then(response => response.json());
-
-						
+			
     }
 
     getBugReportInfo(id) {
@@ -61,6 +60,11 @@ export class Database {
          return this.http.fetch("users")
             .then(response => response.json());
     }
-
-
+    
+    saveUserGroupAssign(userGroup) {
+		return this.http.fetch("memberships", {
+				method: "post",
+				body: json(userGroup)
+		})
+	}
 }

@@ -8,10 +8,11 @@ export class bugReport {
     constructor(database, router) {
             this.db = database;
             this.router = router;
+            this.userGroup = {}
 		}
    
 async activate(params) {
-
+        
         this.id = params.id;
         let currentBug = await this.db.getBugReportInfo(params.id);
 
@@ -19,6 +20,7 @@ async activate(params) {
         this.selectedUser = currentBug.assignee;
         
         this.selectedVal = currentBug.status;
+        this.selectedGroup = "manager";
         
         let Users = await this.db.getAllUsers();
         
@@ -37,5 +39,10 @@ async activate(params) {
   submitUser(id) {
       console.log(this.selectedUser.userName);
       this.db.updateBugReportAssignee(this.selectedUser, id);   
+  }
+
+  submitGroup() {
+    this.db.saveUserGroupAssign(this.userGroup);
+    console.log(this.userGroup);
   }
 }
