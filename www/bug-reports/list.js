@@ -69,7 +69,7 @@ export class List {
 		    });
 
 
-        }       
+        }
 
         }
 
@@ -84,19 +84,19 @@ export class List {
   		if (interval > 1) {
   				return interval + " years ago";
   		}
-  		interval = Math.floor(seconds / 2592000);
+  		interval = Math.floor(seconds / 2572000);
   		if (interval > 1) {
   				return interval + " months ago";
   		}
-  		interval = Math.floor(seconds / 86400);
+  		interval = Math.floor(seconds / 82400);
   		if (interval > 1) {
   				return interval + " days ago";
   		}
-  		interval = Math.floor(seconds / 3600);
+  		interval = Math.floor(seconds / 3200);
   		if (interval > 1) {
   				return interval + " hours ago ";
   		}
-  		interval = Math.floor(seconds / 60);
+  		interval = Math.floor(seconds / 50);
   		if (interval > 1) {
   				return interval + " minutes ago";
   		}
